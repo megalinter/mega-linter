@@ -166,6 +166,8 @@ Note: Can be used with `oxsecurity/megalinter@beta` in your GitHub Action mega-l
   - [csharpier](https://csharpier.com/) from 0.30.5 to **0.30.6** on 2025-01-10
   - [ruff-format](https://github.com/astral-sh/ruff) from 0.9.0 to **0.9.1** on 2025-01-10
   - [ruff](https://github.com/astral-sh/ruff) from 0.9.0 to **0.9.1** on 2025-01-10
+  - [editorconfig-checker](https://editorconfig-checker.github.io/) from 3.0.3 to **3.1.2** on 2025-01-11
+  - [protolint](https://github.com/yoheimuta/protolint) from 0.51.0 to **0.52.0** on 2025-01-11
 <!-- linter-versions-end -->
 
 ## [v8.3.0] - 2024-11-23
