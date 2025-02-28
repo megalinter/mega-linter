@@ -2,15 +2,18 @@
 	"name": "MegaLinter",
 	"build": {
 		"dockerfile": "Dockerfile",
-		"context": "..",
-		"args": { 
-			"VARIANT": "3.10",
-			"NODE_VERSION": "16"
+		"context": ".."
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"version": "latest",
+			"enableNonRootDocker": "true",
+			"moby": "true"
 		}
 	},
 	"customizations": {
 		"vscode": {
-			"settings": { 
+			"settings": {
 				"python.defaultInterpreterPath": "/usr/local/bin/python",
 				"python.linting.enabled": true,
 				"python.linting.pylintEnabled": true,
@@ -24,7 +27,7 @@
 				"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
 				"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
 			},
-			
+
 			"extensions": [
 				"esbenp.prettier-vscode",
 				"exiasr.hadolint",
@@ -39,9 +42,13 @@
 				"rogalmic.bash-debug",
 				"streetsidesoftware.code-spell-checker",
 				"stylelint.vscode-stylelint",
-				"timonwong.shellcheck"
+				"timonwong.shellcheck",
+				"ms-azuretools.vscode-docker"
 			]
 		}
+	},
+	"containerEnv": {
+		"DOCKER_BUILDKIT": "1"
 	},
 	"remoteUser": "vscode"
 }
